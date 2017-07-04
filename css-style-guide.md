@@ -23,21 +23,21 @@ UTF-8 编码具有更广泛的适应性。BOM 在使用程序或工具处理文�
 ### 2.2 缩进
 
 
-#### [强制] 使用 `4` 个空格做为一个缩进层级，不允许使用 `2` 个空格 或 `tab` 字符。[注] sublime等编辑器可以支持。
+#### `【强制】` 使用 `4` 个空格长度的Tab做为一个缩进层级，不允许使用 `2` 个空格字符。[注] sublime等编辑器可以支持。
 
 示例：
 
 ```css
 .selector {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 ```
 
 ### 2.3 空格
 
 
-#### [强制] `选择器` 与 `{` 之间必须包含空格。
+#### [建议] `选择器` 与 `{` 之间必须包含空格。
 
 示例：
 
@@ -46,7 +46,7 @@ UTF-8 编码具有更广泛的适应性。BOM 在使用程序或工具处理文�
 }
 ```
 
-#### [强制] `属性名` 与之后的 `:` 之间不允许包含空格， `:` 与 `属性值` 之间必须包含空格。
+#### [建议] `属性名` 与之后的 `:` 之间不允许包含空格， `:` 与 `属性值` 之间必须包含空格。
 
 示例：
 
@@ -54,7 +54,7 @@ UTF-8 编码具有更广泛的适应性。BOM 在使用程序或工具处理文�
 margin: 0;
 ```
 
-#### [强制] `列表型属性值` 书写在单行时，`,` 后必须跟一个空格。
+#### [建议] `列表型属性值` 书写在单行时，`,` 后必须跟一个空格。
 
 示例：
 
@@ -65,7 +65,7 @@ font-family: Arial, sans-serif;
 ### 2.4 行长度
 
 
-#### [强制] 每行不得超过 `120` 个字符，除非单行不可分割。
+#### [建议] 每行不得超过 `120` 个字符，除非单行不可分割。
 
 解释：
 
@@ -79,28 +79,28 @@ font-family: Arial, sans-serif;
 ```css
 /* 不同属性值按逻辑分组 */
 background:
-    transparent url(aVeryVeryVeryLongUrlIsPlacedHere)
-    no-repeat 0 0;
+	transparent url(aVeryVeryVeryLongUrlIsPlacedHere)
+	no-repeat 0 0;
 
 /* 可重复多次的属性，每次重复一行 */
 background-image:
-    url(aVeryVeryVeryLongUrlIsPlacedHere)
-    url(anotherVeryVeryVeryLongUrlIsPlacedHere);
+	url(aVeryVeryVeryLongUrlIsPlacedHere)
+	url(anotherVeryVeryVeryLongUrlIsPlacedHere);
 
 /* 类似函数的属性值可以根据函数调用的缩进进行 */
 background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.04, rgb(88,94,124)),
-    color-stop(0.52, rgb(115,123,162))
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.04, rgb(88,94,124)),
+	color-stop(0.52, rgb(115,123,162))
 );
 ```
 
 ### 2.5 选择器
 
 
-#### [强制] 当一个 rule 包含多个 selector 时，每个选择器声明必须独占一行。
+#### [建议] 当一个 rule 包含多个 selector 时，每个选择器声明必须独占一行。
 
 示例：
 
@@ -109,48 +109,48 @@ background-image: -webkit-gradient(
 .post,
 .page,
 .comment {
-    line-height: 1.5;
+	line-height: 1.5;
 }
 
 /* bad */
 .post, .page, .comment {
-    line-height: 1.5;
+	line-height: 1.5;
 }
 ```
 
-#### [强制] `>`、`+`、`~` 选择器的两边各保留一个空格。
+#### `【强制】` `>`、`+`、`~` 选择器的两边各保留一个空格。
 
 示例：
 
 ```css
 /* good */
 main > nav {
-    padding: 10px;
+	padding: 10px;
 }
 
 label + input {
-    margin-left: 5px;
+	margin-left: 5px;
 }
 
 input:checked ~ button {
-    background-color: #69C;
+	background-color: #69C;
 }
 
 /* bad */
 main>nav {
-    padding: 10px;
+	padding: 10px;
 }
 
 label+input {
-    margin-left: 5px;
+	margin-left: 5px;
 }
 
 input:checked~button {
-    background-color: #69C;
+	background-color: #69C;
 }
 ```
 
-#### [强制] 属性选择器中的值必须用双引号包围。
+#### `【强制】` 属性选择器中的值必须用双引号包围。
 
 解释：
 
@@ -162,46 +162,46 @@ input:checked~button {
 ```css
 /* good */
 article[character="juliet"] {
-    voice-family: "Vivien Leigh", victoria, female;
+	voice-family: "Vivien Leigh", victoria, female;
 }
 
 /* bad */
 article[character='juliet'] {
-    voice-family: "Vivien Leigh", victoria, female;
+	voice-family: "Vivien Leigh", victoria, female;
 }
 ```
 
 ### 2.6 属性
 
 
-#### [强制] 属性定义必须另起一行。
+#### `【强制】` 属性定义必须另起一行。
 
 示例：
 
 ```css
 /* good */
 .selector {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* bad */
 .selector { margin: 0; padding: 0; }
 ```
 
-#### [强制] 属性定义后必须以分号结尾。
+#### `【强制】` 属性定义后必须以分号结尾。
 
 示例：
 
 ```css
 /* good */
 .selector {
-    margin: 0;
+	margin: 0;
 }
 
 /* bad */
 .selector {
-    margin: 0
+	margin: 0
 }
 ```
 
@@ -209,7 +209,7 @@ article[character='juliet'] {
 
 ### 3.1 选择器
 
-#### [强制] 如无必要，不得为 `id`、`class` 选择器添加类型选择器进行限定。
+#### `【强制】` 如无必要，不得为 `id`、`class` 选择器添加类型选择器进行限定。
 
 解释：
 
@@ -223,13 +223,13 @@ article[character='juliet'] {
 /* good */
 #error,
 .danger-message {
-    font-color: #c00;
+	font-color: #c00;
 }
 
 /* bad */
 dialog#error,
 p.danger-message {
-    font-color: #c00;
+	font-color: #c00;
 }
 ```
 
@@ -256,14 +256,14 @@ p.danger-message {
 ```css
 /* good */
 .post {
-    font: 12px/1.5 arial, sans-serif;
+	font: 12px/1.5 arial, sans-serif;
 }
 
 /* bad */
 .post {
-    font-family: arial, sans-serif;
-    font-size: 12px;
-    line-height: 1.5;
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	line-height: 1.5;
 }
 ```
 
@@ -279,27 +279,27 @@ p.danger-message {
 ```css
 /* centering <article class="page"> horizontally and highlight featured ones */
 article {
-    margin: 5px;
-    border: 1px solid #999;
+	margin: 5px;
+	border: 1px solid #999;
 }
 
 /* good */
 .page {
-    margin-right: auto;
-    margin-left: auto;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .featured {
-    border-color: #69c;
+	border-color: #69c;
 }
 
 /* bad */
 .page {
-    margin: 5px auto; /* introducing redundancy */
+	margin: 5px auto; /* introducing redundancy */
 }
 
 .featured {
-    border: 1px solid #69c; /* introducing redundancy */
+	border: 1px solid #69c; /* introducing redundancy */
 }
 ```
 
@@ -323,27 +323,27 @@ article {
 
 ```css
 .sidebar {
-    /* formatting model: positioning schemes / offsets / z-indexes / display / ...  */
-    position: absolute;
-    top: 50px;
-    left: 0;
-    overflow-x: hidden;
+	/* formatting model: positioning schemes / offsets / z-indexes / display / ...  */
+	position: absolute;
+	top: 50px;
+	left: 0;
+	overflow-x: hidden;
 
-    /* box model: sizes / margins / paddings / borders / ...  */
-    width: 200px;
-    padding: 5px;
-    border: 1px solid #ddd;
+	/* box model: sizes / margins / paddings / borders / ...  */
+	width: 200px;
+	padding: 5px;
+	border: 1px solid #ddd;
 
-    /* typographic: font / aligns / text styles / ... */
-    font-size: 14px;
-    line-height: 20px;
+	/* typographic: font / aligns / text styles / ... */
+	font-size: 14px;
+	line-height: 20px;
 
-    /* visual: colors / shadows / gradients / ... */
-    background: #f5f5f5;
-    color: #333;
-    -webkit-transition: color 1s;
-       -moz-transition: color 1s;
-            transition: color 1s;
+	/* visual: colors / shadows / gradients / ... */
+	background: #f5f5f5;
+	color: #333;
+	-webkit-transition: color 1s;
+	   -moz-transition: color 1s;
+			transition: color 1s;
 }
 ```
 
@@ -369,11 +369,11 @@ article {
 .clearfix() {
   &:before,
   &:after {
-    content: " "; // 1
-    display: table; // 2
+	content: " "; // 1
+	display: table; // 2
   }
   &:after {
-    clear: both;
+	clear: both;
   }
 }
 ```
@@ -419,7 +419,7 @@ article {
 
 ### 4.1 文本
 
-#### [强制] 文本内容必须用双引号包围。
+#### `【强制】` 文本内容必须用双引号包围。
 
 解释：
 
@@ -430,54 +430,54 @@ article {
 ```css
 /* good */
 html[lang|="zh"] q:before {
-    font-family: "Microsoft YaHei", sans-serif;
-    content: "“";
+	font-family: "Microsoft YaHei", sans-serif;
+	content: "“";
 }
 
 html[lang|="zh"] q:after {
-    font-family: "Microsoft YaHei", sans-serif;
-    content: "”";
+	font-family: "Microsoft YaHei", sans-serif;
+	content: "”";
 }
 
 /* bad */
 html[lang|=zh] q:before {
-    font-family: 'Microsoft YaHei', sans-serif;
-    content: '“';
+	font-family: 'Microsoft YaHei', sans-serif;
+	content: '“';
 }
 
 html[lang|=zh] q:after {
-    font-family: "Microsoft YaHei", sans-serif;
-    content: "”";
+	font-family: "Microsoft YaHei", sans-serif;
+	content: "”";
 }
 ```
 
 ### 4.2 数值
 
-#### [强制] 当数值为 0 - 1 之间的小数时，省略整数部分的 `0`。
+#### `【强制】` 当数值为 0 - 1 之间的小数时，省略整数部分的 `0`。
 
 示例：
 
 ```css
 /* good */
 panel {
-    opacity: .8;
+	opacity: .8;
 }
 
 /* bad */
 panel {
-    opacity: 0.8;
+	opacity: 0.8;
 }
 ```
 
 ### 4.3 url()
 
-#### [强制] `url()` 函数中的路径不加引号。
+#### `【强制】` `url()` 函数中的路径不加引号。
 
 示例：
 
 ```css
 body {
-    background: url(bg.png);
+	background: url(bg.png);
 }
 ```
 
@@ -487,31 +487,31 @@ body {
 
 ```css
 body {
-    background: url(//baidu.com/img/bg.png) no-repeat 0 0;
+	background: url(//baidu.com/img/bg.png) no-repeat 0 0;
 }
 ```
 
 ### 4.4 长度
 
-#### [强制] 长度为 `0` 时须省略单位。 (也只有长度单位可省)
+#### `【强制】` 长度为 `0` 时须省略单位。 (也只有长度单位可省)
 
 示例：
 
 ```css
 /* good */
 body {
-    padding: 0 5px;
+	padding: 0 5px;
 }
 
 /* bad */
 body {
-    padding: 0px 5px;
+	padding: 0px 5px;
 }
 ```
 
 ### 4.5 颜色    
 
-#### [强制] RGB颜色值必须使用十六进制记号形式 `#rrggbb`。不允许使用 `rgb()`。 
+#### `【强制】` RGB颜色值必须使用十六进制记号形式 `#rrggbb`。不允许使用 `rgb()`。 
 
 解释：
 
@@ -523,46 +523,46 @@ body {
 ```css
 /* good */
 .success {
-    box-shadow: 0 0 2px rgba(0, 128, 0, .3);
-    border-color: #008000;
+	box-shadow: 0 0 2px rgba(0, 128, 0, .3);
+	border-color: #008000;
 }
 
 /* bad */
 .success {
-    box-shadow: 0 0 2px rgba(0,128,0,.3);
-    border-color: rgb(0, 128, 0);
+	box-shadow: 0 0 2px rgba(0,128,0,.3);
+	border-color: rgb(0, 128, 0);
 }
 ```
 
-#### [强制] 颜色值可以缩写时，必须使用缩写形式。
+#### `【强制】` 颜色值可以缩写时，必须使用缩写形式。
 
 示例：
 
 ```css
 /* good */
 .success {
-    background-color: #aca;
+	background-color: #aca;
 }
 
 /* bad */
 .success {
-    background-color: #aaccaa;
+	background-color: #aaccaa;
 }
 ```
 
-#### [强制] 颜色值不允许使用命名色值。
+#### `【强制】` 颜色值不允许使用命名色值。
 
 示例：
 
 ```css
 /* good */
 .success {
-    color: #90ee90;
+	color: #90ee90;
 }
 
 /* bad */
 .success {
-    color: lightgreen;
+	color: lightgreen;
 }
 ```
 
@@ -574,20 +574,20 @@ body {
 ```css
 /* good */
 .success {
-    background-color: #aca;
-    color: #90ee90;
+	background-color: #aca;
+	color: #90ee90;
 }
 
 /* good */
 .success {
-    background-color: #ACA;
-    color: #90EE90;
+	background-color: #ACA;
+	color: #90EE90;
 }
 
 /* bad */
 .success {
-    background-color: #ACA;
-    color: #90ee90;
+	background-color: #ACA;
+	color: #90ee90;
 }
 ```
 
@@ -595,7 +595,7 @@ body {
 ### 4.6 2D 位置
 
 
-#### [强制] 必须同时给出水平和垂直方向的位置。
+#### `【建议】` 必须同时给出水平和垂直方向的位置。
 
 解释：
 
@@ -607,18 +607,15 @@ body {
 ```css
 /* good */
 body {
-    background-position: center top; /* 50% 0% */
+	background-position: center top; /* 50% 0% */
 }
 
 /* bad */
 body {
-    background-position: top; /* 50% 0% */
+	background-position: top; /* 50% 0% */
 }
 ```
-
-
-
-
+ 
 
 ## 5 文本编排
 
@@ -626,7 +623,7 @@ body {
 ### 5.1 字体族
 
 
-#### [强制] `font-family` 属性中的字体族名称应使用字体的英文 `Family Name`，其中如有空格，须放置在引号中。
+#### [建议] `font-family` 属性中的字体族名称应使用字体的英文 `Family Name`，其中如有空格，须放置在引号中。
 
 解释：
 
@@ -648,12 +645,12 @@ body {
 
 ```css
 h1 {
-    font-family: "Microsoft YaHei";
+	font-family: "Microsoft YaHei";
 }
 ```
 
 
-#### [强制] `font-family` 按「西文字体在前、中文字体在后」、「效果佳 (质量高/更能满足需求) 的字体在前、效果一般的字体在后」的顺序编写，最后必须指定一个通用字体族( `serif` / `sans-serif` )。
+#### [建议] `font-family` 按「西文字体在前、中文字体在后」、「效果佳 (质量高/更能满足需求) 的字体在前、效果一般的字体在后」的顺序编写，最后必须指定一个通用字体族( `serif` / `sans-serif` )。
 
 解释：
 
@@ -664,43 +661,43 @@ h1 {
 ```css
 /* Display according to platform */
 .article {
-    font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 /* Specific for most platforms */
 h1 {
-    font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
+	font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
 }
 ```
 
-#### [强制] `font-family` 不区分大小写，但在同一个项目中，同样的 `Family Name` 大小写必须统一。
+#### [建议] `font-family` 不区分大小写，但在同一个项目中，同样的 `Family Name` 大小写必须统一。
 
 示例：
 
 ```css
 /* good */
 body {
-    font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 h1 {
-    font-family: Arial, "Microsoft YaHei", sans-serif;
+	font-family: Arial, "Microsoft YaHei", sans-serif;
 }
 
 /* bad */
 body {
-    font-family: arial, sans-serif;
+	font-family: arial, sans-serif;
 }
 
 h1 {
-    font-family: Arial, "Microsoft YaHei", sans-serif;
+	font-family: Arial, "Microsoft YaHei", sans-serif;
 }
 ```
 
 ### 5.2 字号
 
 
-#### [强制] 需要在 Windows 平台显示的中文内容，其字号应不小于 `12px`。
+#### `【强制】` 需要在 Windows 平台显示的中文内容，其字号应不小于 `12px`。
 
 解释：
 
@@ -717,7 +714,7 @@ h1 {
 
 ### 5.4 字重
 
-#### [强制] `font-weight` 属性必须使用数值方式描述。
+#### [建议] `font-weight` 属性必须使用数值方式描述。
 
 解释：
 
@@ -732,12 +729,12 @@ CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览
 ```css
 /* good */
 h1 {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 /* bad */
 h1 {
-    font-weight: bold;
+	font-weight: bold;
 }
 ```
 
@@ -757,7 +754,7 @@ h1 {
 
 ```css
 .container {
-    line-height: 1.5;
+	line-height: 1.5;
 }
 ```
 
@@ -767,19 +764,19 @@ h1 {
 
 
 
-#### [强制] 使用 `transition` 时应指定 `transition-property`。
+#### `【强制】` 使用 `transition` 时应指定 `transition-property`。
 
 示例：
 
 ```css
 /* good */
 .box {
-    transition: color 1s, border-color 1s;
+	transition: color 1s, border-color 1s;
 }
 
 /* bad */
 .box {
-    transition: all 1s;
+	transition: all 1s;
 }
 ```
 
@@ -801,19 +798,19 @@ h1 {
 ```css
 /* good */
 .box {
-    transition: transform 1s;
+	transition: transform 1s;
 }
 .box:hover {
-    transform: translate(20px); /* move right for 20px */
+	transform: translate(20px); /* move right for 20px */
 }
 
 /* bad */
 .box {
-    left: 0;
-    transition: left 1s;
+	left: 0;
+	transition: left 1s;
 }
 .box:hover {
-    left: 20px; /* move right for 20px */
+	left: 20px; /* move right for 20px */
 }
 ```
 
@@ -824,7 +821,7 @@ h1 {
 
 
 
-#### [强制] `Media Query` 不得单独编排，必须与相关的规则一起定义。
+#### [建议] `Media Query` 不得单独编排，必须与相关的规则一起定义。
 
 示例：
 
@@ -832,17 +829,17 @@ h1 {
 /* Good */
 /* header styles */
 @media (...) {
-    /* header styles */
+	/* header styles */
 }
 
 /* main styles */
 @media (...) {
-    /* main styles */
+	/* main styles */
 }
 
 /* footer styles */
 @media (...) {
-    /* footer styles */
+	/* footer styles */
 }
 
 
@@ -852,13 +849,13 @@ h1 {
 /* footer styles */
 
 @media (...) {
-    /* header styles */
-    /* main styles */
-    /* footer styles */
+	/* header styles */
+	/* main styles */
+	/* footer styles */
 }
 ```
 
-#### [强制] `Media Query` 如果有多个逗号分隔的条件时，应将每个条件放在单独一行中。
+#### [建议] `Media Query` 如果有多个逗号分隔的条件时，应将每个条件放在单独一行中。
 
 示例：
 
@@ -868,7 +865,7 @@ h1 {
 (min--moz-device-pixel-ratio: 2),    /* Older Firefox browsers (prior to Firefox 16) */
 (min-resolution: 2dppx),             /* The standard way */
 (min-resolution: 192dpi) {           /* dppx fallback */
-    /* Retina-specific stuff here */
+	/* Retina-specific stuff here */
 }
 ```
 
@@ -882,7 +879,7 @@ h1 {
 ### 8.1 属性前缀
 
 
-#### [强制] 带私有前缀的属性由长到短排列，按冒号位置对齐。
+#### [建议] 带私有前缀的属性由长到短排列，按冒号位置对齐。
 
 解释：
 
@@ -893,9 +890,9 @@ h1 {
 
 ```css
 .box {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
 }
 ```
 
@@ -921,14 +918,14 @@ h1 {
 ```css
 /* IE 7 */
 *:first-child + html #header {
-    margin-top: 3px;
-    padding: 5px;
+	margin-top: 3px;
+	padding: 5px;
 }
 
 /* IE 6 */
 * html #header {
-    margin-top: 5px;
-    padding: 4px;
+	margin-top: 5px;
+	padding: 4px;
 }
 ```
 
@@ -939,18 +936,18 @@ h1 {
 
 ```css
 .box {
-    _display: inline; /* fix double margin */
-    float: left;
-    margin-left: 20px;
+	_display: inline; /* fix double margin */
+	float: left;
+	margin-left: 20px;
 }
 
 .container {
-    overflow: hidden;
-    *zoom: 1; /* triggering hasLayout */
+	overflow: hidden;
+	*zoom: 1; /* triggering hasLayout */
 }
 ```
 
 ### 8.3 Expression
 
 
-#### [强制] 禁止使用 `Expression`。
+#### `【强制】` 禁止使用 `Expression`。
