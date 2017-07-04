@@ -3,7 +3,7 @@
 #### 1）代码风格
 
 #### 2）JavaScript代码规范
-
+[javascript代码规范 v1.0](https://github.com/Che300FE/front-end-code-standards/blob/master/javascript_style_guide.md)
 #### 3）CSS代码规范
 
 [CSS代码规范 v1.0](http://git.guchele.cn:808/fe/front-end-code-standards/blob/master/css-style-guide.md)
