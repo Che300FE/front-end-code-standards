@@ -19,8 +19,8 @@
 
 #### 6）ES6代码规范
 
-[LESS代码规范 v1.0](https://github.com/Che300FE/front-end-code-standards/blob/master/es6-note-updating.md)
+[ES6代码规范 v1.0](https://github.com/Che300FE/front-end-code-standards/blob/master/es6-note-updating.md)
 
 #### git 使用规范
 
-[LESS代码规范 v1.0](https://github.com/Che300FE/front-end-code-standards/blob/master/git-work-guide.md)
+[git 使用规范 v1.0](https://github.com/Che300FE/front-end-code-standards/blob/master/git-work-guide.md)
