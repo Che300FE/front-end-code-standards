@@ -99,3 +99,16 @@ $ git push origin develop
 
 http://zengrong.net/post/1746.htm
 
+#### 6、更换远程仓库地址
+
+1.修改命令
+
+git remote set-url origin [url]
+
+例如：git remote set-url origin gitlab@gitlab.chumob.com:php/hasoffer.git
+
+2.先删后加
+
+git remote rm origin
+
+git remote add origin [url]
